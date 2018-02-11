@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Artificial Disasters</title>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<style>
+.but1{	margin-left: 40px;
+	padding: 10px 32px;
+   	}
+.but1{	margin-left: 40px;
+	padding: 10px 32px;
+   	}
+ 
+.bats input[type=radio] {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+      }
+.bats {
+        width: 681px;
+        float: none;
+        list-style: none;
+        margin-top: 15px;
+        margin-left: 400px;
+      }
+.bats li{
+        float: left;
+      }
+  .bats label a{color:white;}
+ .bats label {
+          display: block;
+          padding: 10px 20px;
+          border-radius: 2px 2px 0 0;
+          color: white;
+          font-size: 16px;
+          font-weight: normal;
+          font-family: Arial;
+          background: black;
+          cursor: pointer;
+          top: 3px;
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+      }
+ .bats label:hover { background: #f5f5f0;  }
+.bats label a:hover { color:black;  }
+
+
+body a{
+	text-decoration: none;
+	color: black;
+}
+p{
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+        width: 83%;
+	float: left; 
+	background-color:  #d1e0e0; 
+	padding: 20px;
+	margin-top:-40px;
+	margin-left:75px;
+	font-size:16px;
+}
+.p1{
+        font-size:18px;
+	padding: 30px;
+	width: 500px;
+	height: 300px;
+	margin-top:70px;}
+
+
+h2,h3, h4{	
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	width: 83%;
+	float: left; 
+	background-color:  #d1e0e0; 
+	padding: 20px;
+	margin-left: 75px;
+	padding: 20px;
+	font-size: 20px;
+	font-family:Arial;
+}
+h2{font-size:30px;}
+
+.menu{
+	z-index:2;
+	background:black;
+	position: fixed;
+	top:0px;
+	left:-5px;
+	height:65px;
+	width:112%;
+}
+h1{ 
+	position: fixed;
+	left: 90px;
+	top: -5px;
+	font-size: 35px;
+	color: white;
+}
+img{
+	border: 3px solid black;
+	margin-top:70px;
+	margin-right:85px;
+	float: right;
+	width: 500px;
+	height: 360px;
+}
+body{
+	background: #f5f5f0;
+          height: 100%;
+          -webkit-font-smoothing: antialiased;
+          font-weight: 100;
+          font-family: helvetica;
+      }
+       
+.tabs input[type=radio] {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+      }
+.tabs {
+        width: 1200px;
+        float: none;
+        list-style: none;
+        padding: 0; 
+        margin-top: 50px;
+        margin-left: 75px;
+      }
+.tabs li{
+        float: left;
+      }
+ .tabs label {
+          display: block;
+          padding: 10px 20px;
+          border-radius: 2px 2px 0 0;
+          color: #000;
+          font-size: 24px;
+          font-weight: normal;
+          font-family: Arial;
+          background:  #d1e0e0;
+          cursor: pointer;
+          top: 3px;
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+      }
+ .tabs label:hover {
+        background: #e6f5ff;
+
+      }
+       
+[id^=tab]:checked + label {
+        background: #e6f5ff;
+        color: black;
+      }
+       
+ [id^=tab]:checked ~ [id^=tab-content] {
+          display: block;
+      }
+.tab-content{
+	z-index:1;
+        display: none;
+        text-align: left;
+        width: 84%;
+        font-size: 20px;
+        line-height: 140%;
+        padding-top: 10px;
+        background:  #d1e0e0;
+        padding: 10px;
+        color: black;
+        position: absolute;
+		left:84px;
+		margin-bottom:50px;
+        -webkit-animation-duration: 0.5s;
+        -o-animation-duration: 0.5s;
+        -moz-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+      }
+ul{margin-top:1000px;}
+
+.search{position:fixed;top:15px;left:1100px;;}
+i{color:#a6a6a6;position:fixed;top:20px;left:1270px;cursor:pointer;}
+i:hover{color:black;}
+.searchfield{padding:3px;background: #f5f5f0; font-size:16px; height:28px;border-radius:5px;}
+
+#dropbtn {
+	color:white;
+	position:fixed;
+	top:20px;
+	left:1313px;
+	cursor:pointer;
+	font-size:28px;
+    background-color: #000;
+	border:black;
+    cursor: pointer;
+}
+#dropbtn:hover{color: #f1f1f1}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+	top: 65px;
+	left:1185px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+</style>
+
+
+<body>
+<div class="menu">
+<ul class="bats">
+        <li>
+          <input type="radio" checked name="bats" id="bat1">
+          <label for="bat1"><a href="Home.html">Home</a></label>
+	</li>
+        <li>
+          <input type="radio" checked name="bats" id="bat1">
+          <label for="bat1"><a href="NaturalDis.html">Natural Disaster</a></label>
+	</li>
+
+        <li>
+          <input type="radio" name="bats" id="bat2">
+          <label for="bat2" style="background: #f5f5f0;"><a style="color: black;" href="ArtificialDis.html">Artificial Disasters</a></label>
+        </li>
+
+        <li>
+          <input type="radio" name="bats" id="bat3">
+          <label for="bat3"><a href="Photos.html">Picture Gallery</a></label>
+        </li>
+	<li>
+          <input type="radio" name="bats" id="bat4">
+          <label for="bat4"><a href="AboutUs.html">About us</a></label>
+
+        </li>
+
+</ul><br><br><br>
+<h1>Artificial Disasters</h1>
+<div class="search"><input class="searchfield" type="text" placeholder="search"><i class="fa fa-search" style="font-size:24px"></i>
+<div class="dropdown">
+  <i onclick="dropdown()" id="dropbtn" class="fa fa-user"></i>
+  
+  <div id="myDropdown" class="dropdown-content">
+    <a href="Profile.html">View profile</a>
+    <a href="LogIn.html">Log in</a>
+    <a href="SignUp.html">Sign up</a>
+  </div>
+</div>
+</div>
+</div>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function dropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('#dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+<p class="p1">Human-instigated disasters are the consequence of technological hazards. Examples include stampedes, fires, transport accidents, industrial accidents, oil spills and nuclear explosions/radiation. War and deliberate attacks may also be put in this category. As with natural hazards, man-made hazards are events that have not happened—for instance, terrorism. Man-made disasters are examples of specific cases where man-made hazards have become reality in an event.</p>
+<a href="http://4.bp.blogspot.com/_1LfpM1S_nq4/TPiFuH26bSI/AAAAAAAAAD0/fBN890IKMWM/s1600/Man-made.jpg"><img src="http://4.bp.blogspot.com/_1LfpM1S_nq4/TPiFuH26bSI/AAAAAAAAAD0/fBN890IKMWM/s1600/Man-made.jpg"></img></a>
+
+
+
+<h2>
+Classification of Artificial Disasters</h2>
+<ul class="tabs">
+        <li>
+          <input type="radio" checked name="tabs" id="tab1">
+          <label for="tab1">Nuclear disasters</label>
+          <div id="tab-content1" class="tab-content animated fadeIn">
+<p style="margin-top:20px;">A nuclear and radiation accident is defined by the International Atomic Energy Agency (IAEA) as "an event that has led to significant consequences to people, the environment or the facility." Examples include lethal effects to individuals, large radioactivity release to the environment, or reactor core melt." The prime example of a "major nuclear accident" is one in which a reactor core is damaged and significant amounts of radioactivity are released, such as in the Chernobyl disaster in 1986.
+The impact of nuclear accidents has been a topic of debate practically since the first nuclear reactors were constructed in 1954. It has also been a key factor in public concern about nuclear facilities. Some technical measures to reduce the risk of accidents or to minimize the amount of radioactivity released to the environment have been adopted. Despite the use of such measures, human error remains, and "there have been many accidents with varying impacts as well near misses and incidents".</p>
+<h4>Nuclear power plant accidents</h4>
+<p>One of the worst nuclear accidents to date was the Chernobyl disaster which occurred in 1986 in Ukraine. The accident killed 31 people directly and damaged approximately $7 billion of property. A study published in 2005 estimates that there will eventually be up to 4,000 additional cancer deaths related to the accident among those exposed to significant radiation levels. Radioactive fallout from the accident was concentrated in areas of Belarus, Ukraine and Russia. Approximately 350,000 people were forcibly resettled away from these areas soon after the accident.
+Benjamin K. Sovacool has reported that worldwide there have been 99 accidents at nuclear power plants from 1952 to 2009 (defined as incidents that either resulted in the loss of human life or more than US$50,000 of property damage, the amount the US federal government uses to define major energy accidents that must be reported), totaling US$20.5 billion in property damages. Fifty-seven accidents have occurred since the Chernobyl disaster, and almost two-thirds (56 out of 99) of all nuclear-related accidents have occurred in the US. There have been comparatively few fatalities associated with nuclear power plant accidents.</p>
+
+<h4>Nuclear reactor attacks</h4>
+<p>The vulnerability of nuclear plants to deliberate attack is of concern in the area of nuclear safety and security. Nuclear power plants, civilian research reactors, certain naval fuel facilities, uranium enrichment plants, fuel fabrication plants, and even potentially uranium mines are vulnerable to attacks which could lead to widespread radioactive contamination. The attack threat is of several general types: commando-like ground-based attacks on equipment which if disabled could lead to a reactor core meltdown or widespread dispersal of radioactivity; and external attacks such as an aircraft crash into a reactor complex, or cyber attacks.</p>
+<h4>Nuclear meltdown</h4>
+<p>A nuclear meltdown is a severe nuclear reactor accident that results in reactor core damage from overheating. It has been defined as the accidental melting of the core of a nuclear reactor, and refers to the core's either complete or partial collapse. A core melt accident occurs when the heat generated by a nuclear reactor exceeds the heat removed by the cooling systems to the point where at least one nuclear fuel element exceeds its melting point. This differs from a fuel element failure, which is not caused by high temperatures. A meltdown may be caused by a loss of coolant, loss of coolant pressure, or low coolant flow rate or be the result of a criticality excursion in which the reactor is operated at a power level that exceeds its design limits. Alternately, in a reactor plant such as the RBMK-1000, an external fire may endanger the core, leading to a meltdown.</p>
+<h4>Nuclear war</h4> 
+<p>A nuclear war is a war in which countries fight with nuclear weapons. A nuclear war has never happened, but because nuclear weapons are extremely powerful and could cause destruction throughout the world, the possibility of nuclear war has had a great effect on international politics.
+</p><p>Nuclear bombs were first invented during World War II and were used by the United States to bring about the surrender of Japan. Two bombs were dropped, one each on the cities of Hiroshima and Nagasaki. They are still the only nuclear weapons that have ever been used in fighting a war. At that time only the United States had the technology needed to make the bomb, but within a few years the Soviet Union had developed it too. In the new Cold War, the United States and the Soviet Union were enemies and each had many nuclear weapons, but they did not dare to use them against each other, either directly or by attacking the other country's allies. Since either country could be completely destroyed by the other's weapons, nuclear war could no longer be limited to the use of only one or two bombs; if they were used anywhere by one side, the other would attack with its own nuclear weapons, and the fighting would almost certainly become greater. This situation came to be known as the "balance of terror," or Mutually Assured Destruction, and stopped conflicts between the two superpowers from leading to a third world war.</p></li>
+                  </div><li>
+          <input type="radio" name="tabs" id="tab2">
+          <label for="tab2">Chemical disasters</label>
+          <div id="tab-content2" class="tab-content animated fadeIn">
+	<p style="margin-top:20px;">"chemical accident" means an accident involving a fortuitous, or sudden or unintended occurrence while handling any hazardous chemicals resulting in continuous, intermittent or repeated exposure to death, or injury to, any person or damage to any property but does not include an accident by reason only of war or radio-activity</p>
+	<h4>Oil spill</h4>
+	<p>An oil spill is the release of a liquid petroleum hydrocarbon into the environment, especially marine areas, due to human activity, and is a form of pollution. The term is usually applied to marine oil spills, where oil is released into the ocean or coastal waters, but spills may also occur on land. Oil spills may be due to releases of crude oil from tankers, offshore platforms, drilling rigs and wells, as well as spills of refined petroleum products (such as gasoline, diesel) and their by-products, heavier fuels used by large ships such as bunker fuel, or the spill of any oily refuse or waste oil.</p>
+<h4>Industrial disasters</h4>
+<p>This article lists notable industrial disasters, which are disasters caused by industrial companies, either by accident, negligence or incompetence. They are a form of industrial accident where great damage, injury or loss of life are caused.
+Other disasters can also be considered industrial disasters, if their causes are rooted in the products or processes of industry. For example, the Great Chicago Fire of 1871 was made more severe due to the heavy concentration of lumber industry facilities, wood houses, and fuel and other chemicals in a small area. The Convention on the Transboundary Effects of Industrial Accidents is designed to protect people and the environment from industrial accidents. The Convention aims to prevent accidents from occurring, to reduce their frequency and severity, and to mitigate their effects. The Convention addresses primarily industrial accidents in one country that affect the population or the environment of another country. The Convention was drafted following the Seveso disaster and Sandoz disaster.</p>
+          </div>
+        </li>
+
+        <li>
+          <input type="radio" name="tabs" id="tab3">
+          <label for="tab3">Human Disturbance</label>
+          <div id="tab-content4" class="tab-content animated fadeIn">
+  <h4>Civil Disturbance</h4>
+  <p>Any incident that disrupts a community where intervention is required to maintain public safety constitutes a civil disturbance. Some examples are demonstrations, riots, strikes, public nuisances, and criminal activities. Civil disturbance incidences may include resistance or rejection of all different types of control and authority. They tend to occur in areas of concentrated populations including sporting, concert, cultural and conference events. Some areas subject to civil disturbances may include college communities, areas with concentrations of disparate economic status populations and government offices. Some examples of criminal activities associated with civil disturbances may include looting, assault, property or environmental damage, illegal drug use or distribution, fire-setting, vandalism and violation of noise ordinances.</p>
+<h4>Terrorism</h4>
+<p>Devastating acts such as the terrorist attacks on the World Trade Center and the Pentagon have left many concerned about the possibility of future incidents in the United States and their potential impact. These attacks have raised uncertainty about what might happen next. Terrorism may involve devastating acts using weapons of mass destruction ranging from chemical agents, biological hazards, a radiological or nuclear device, and other explosives. The primary objective of a terrorist is to create widespread fear. Nevertheless, there are things you can do to prepare for the unexpected and reduce the stress that you may feel now and later, should another emergency arise.</p>        </div>
+        </li>
+<li>
+          <input type="radio" name="tabs" id="tab4">
+          <label for="tab4">Other disasters</label>
+          <div id="tab-content5" class="tab-content animated fadeIn">
+<h4>Fire</h4>
+<p>Fires are the accidents which occur most frequently, whose causes are the most diverse and which require intervention methods and techniques adapted to the conditions and needs of each incident.
+Depending on the type of fire (nature of the material ablaze), meteorological conditions (wind) and the effectiveness of the intervention, material damage can be limited (a single car, building or production or storage warehouse installation), or affect wide areas (forest or agricultural fires, hydrocarbons, gas or other highly flammable products, storage or piping installations, harbour installations and rail or marine transport equipment). Explosions are in a different category.
+Each type of fire is the object of specific technical prescriptions as regards prevention, intervention and the behaviour of the population affected. It is also relevant to note that many fires have a criminal origin and that in times of armed conflict or crisis as well as of indirect wars (sabotage) human intervention also provokes major accidents.</p>
+     
+<h4>Biological Disasters</h4>
+<p>Biological hazards, also known as biohazards, refer to biological substances that pose a threat to the health of living organisms, primarily that of humans. This can include medical waste or samples of a microorganism, virus or toxin (from a biological source) that can affect human health. It can also include substances harmful to other animals.
+The term and its associated symbol are generally used as a warning, so that those potentially exposed to the substances will know to take precautions. The biohazard symbol was developed in 1966 by Charles Baldwin, an environmental-health engineer working for the Dow Chemical Company on the containment products.[1][2]
+It is used in the labeling of biological materials that carry a significant health risk, including viral samples and used hypodermic needles.
+In Unicode, the biohazard symbol is U+2623
+Biological disaster spreads through the organism that is developed in the form of BACTERIA or MICROBES. Biological agent spread fast in the environment and then makes an attack on the human beings. The people inhale these microbes. When these microbes find themselves a host body, they start affecting the immune systems of the body. Microbes’ also entire human body through open wounds or cuts.
+The attack of these microbes is generally slow but once they are spread in the body, it becomes different to control them. It takes the life of the affected persons. Many a time, it becomes difficult to diagnose the illness caused by these microbes and it proves to be fatal.
+In October 2001, there was a danger of anthrax germs being used as biological weapons. Anthrax was the cause of death for some people in USA.US authorities also confirmed that a postal worker in the city of Washington DC was tested positive for anthrax infection. Anthrax is a deadly disease caused by bacillus, most common in sheep and cattle but also communicable to mankind.
+Whenever we learn or hear of type of danger of communicable diseases through official announcements on radio or TV, then we can adequate preventive and protective measures.
+We aware that you are one of few, who have quite often tried to help in taking this type of noble cause and solve the problem of affected people, please let us to help in certain time of disaster or create fund for this uncertain event. Therefore we have taken the liberty of appealing to you that if any kind of donation or charity for such type future uncertain event, we would be than thankful.
+</p><h4>Ozone depletion</h4>
+<p>Ozone depletion describes two distinct but related phenomena observed since the late 1970s: a steady decline of about 4% in the total amount of ozone in Earth's stratosphere (the ozone layer), and a much larger springtime decrease in stratospheric ozone around Earth's polar regions. The latter phenomenon is referred to as the ozone hole. In addition to these well-known stratospheric phenomena, there are also springtime polar tropospheric ozone depletion events.</p>
+<h4>Deforestation</h4>
+<p>Deforestation, clearance or clearing is the removal of a forest or stand of trees where the land is thereafter converted to a non-forest use. Examples of deforestation include conversion of forestland to farms, ranches, or urban use. Tropical rainforests is where the most concentrated deforestation occurs. Almost 30% of the world is covered by forests, excluding water mass</p>
+          </div>
+   
+</li>
+
+</ul>
+
+</body>

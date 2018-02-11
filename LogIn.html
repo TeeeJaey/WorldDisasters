@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log in</title>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<style>
+
+.bats input[type=radio] {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+      }
+.bats {
+        width: 681px;
+        float: none;
+        list-style: none;
+        margin-top: 15px;
+        margin-left: 400px;
+      }
+.bats li{
+        float: left;
+      }
+  .bats label a{color:white;}
+ .bats label {
+          display: block;
+          padding: 10px 20px;
+          border-radius: 2px 2px 0 0;
+          color: white;
+          font-size: 16px;
+          font-weight: normal;
+          font-family: Arial;
+          background: black;
+          cursor: pointer;
+          top: 3px;
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+      }
+ .bats label:hover { background: #f5f5f0;  }
+.bats label a:hover { color:black;  }
+
+
+body a{
+	text-decoration: none;
+	color: black;
+}
+p, table, .info{
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+        width: 744px;
+	float: left; 
+	background-color: #b3e0ff; 
+	padding: 20px;
+	margin-top:-40px;
+	margin-left:75px;
+	font-size:16px;
+}
+
+table{width: 786px;padding-right:65px;}
+.info li{margin-left:20px;}
+.p1{width: 744px; margin-top:-10px;}
+
+h2,h3, h4{	
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	width: 744px;
+	float: left; 
+	background-color: #b3e0ff; 
+	padding: 20px;
+	margin-top:150px;
+	margin-left: 75px;
+	padding: 20px;
+	font-size: 20px;
+	font-family:Arial;
+}
+h2{font-size:30px;}
+.menu{
+	z-index:2;
+	background:black;
+	position: fixed;
+	top:0px;
+	left:-5px;
+	height:65px;
+	width:112%;
+}
+h1{ 
+	position: fixed;
+	left: 90px;
+	top: -2px;
+	font-size: 35px;
+	color: white;
+}
+h5{font-size: 20px; margin-top:0px;
+}
+img{
+	border: 2px solid black;
+	border-radius:5px;
+	height:180px;
+	width:180px;
+
+}
+body{  
+      background: #f5f5f0;
+        height: 100%;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 100;
+        font-family: helvetica;
+      }
+.pics{
+	background:#b3e0ff;
+	margin-top: 180px;
+	margin-left: 80px;
+	padding:30px;
+	width:60%;
+}  
+.form{
+	padding: 50px 100px;
+	margin-bottom:50px;
+	position:absolute;
+	left:430px;
+	top:210px;
+	background: #d1e0e0;}    
+td{background:white;font-weight:bold;padding:5px;font-family: helvetica;border:2px solid black;}
+
+.fb:hover{background: #ebebe0;}
+.fb:active{background: #4d88ff;}
+.search{position:fixed;top:15px;left:1100px;;}
+i{color:#a6a6a6;position:fixed;top:20px;left:1270px;cursor:pointer;}
+i:hover{color:black;}
+#user{color:white;position:fixed;top:20px;left:1310px;cursor:pointer;font-size:28px;}
+#user:hover{}
+.searchfield{padding:3px;background: #f5f5f0; font-size:16px; height:28px;border-radius:5px;}
+
+#dropbtn {
+	color:white;
+	position:fixed;
+	top:20px;
+	left:1313px;
+	cursor:pointer;
+	font-size:28px;
+    background-color: #000;
+	border:black;
+    cursor: pointer;
+}
+#dropbtn:hover{color: #f1f1f1}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+	top: 65px;
+	left:1185px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1;}
+
+.show {display:block;}
+#sub{font-size:20px;width:100px;height:50px;}
+#sub:hover{cursor:pointer;}
+</style>
+
+
+<body>
+<script>
+function validateForm() 
+{
+	x = document.forms["myForm"]["email"].value;
+    if (x == null || x == "" || x == '\u2718') { 
+        document.getElementsByName("email")[0].style.border = '1px solid red';	
+        alert("Email ID must be filled out!");	
+		return false;
+	}
+	else{
+		atpos = x.indexOf("@");
+         dotpos = x.lastIndexOf(".");
+         
+         if (atpos < 1 || ( dotpos - atpos < 2 )) 
+         {
+            alert("Please enter correct email ID!");
+			document.getElementsByName("email")[0].style.border = '1px solid red';
+            return false;
+         }
+         else
+			document.getElementsByName("email")[0].style.border = '1px solid green';
+    }
+	
+return true;	
+}	
+
+
+</script>
+
+<div class="menu">
+<h1>Log in</h1>
+<ul class="bats">
+        <li>
+          <input type="radio" checked name="bats" id="bat1">
+          <label for="bat1"><a href="Home.html">Home</a></label>
+	</li>
+        <li>
+          <input type="radio" checked name="bats" id="bat1">
+          <label for="bat1"><a href="NaturalDis.html">Natural Disaster</a></label>
+	</li>
+
+        <li>
+          <input type="radio" name="bats" id="bat2">
+          <label for="bat2"><a href="ArtificialDis.html">Artificial Disasters</a></label>
+        </li>
+
+        <li>
+          <input type="radio" name="bats" id="bat3">
+          <label for="bat3"><a href="Photos.html">Picture Gallery</a></label>
+        </li>
+	<li>
+          <input type="radio" name="bats" id="bat4">
+          <label for="bat4" ><a href="AboutUs.html">About us</a></label>
+
+        </li>
+
+</ul><br><br><br>
+<div class="search"><input class="searchfield" type="text" placeholder="search"><i class="fa fa-search" style="font-size:24px"></i>
+<div class="dropdown">
+  <i onclick="dropdown()" id="dropbtn" class="fa fa-user"></i>
+  
+  <div id="myDropdown" class="dropdown-content">
+    <a href="Profile.html">View profile</a>
+    <a href="LogIn.html">Log in</a>
+    <a href="SignUp.html">Sign up</a>
+  </div>
+</div>
+</div>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function dropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('#dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</div>
+</div>
+
+<div class="form" ng-app="">
+<h5>Log in to your account</h5>
+
+ <form name="myForm" action="Home.html" onsubmit="return validateForm()" method="post">
+		<br>
+		<b>E-mail ID: &nbsp;&nbsp;<input type="text" name="email"><br><br>
+		<b>Password: 
+		<input type="password" placeholder="Password" name="password" ><br><br><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="LogIn.html"><input type="button" value="Cancel" id="sub"></a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="submit" value="Submit" onclick="validateForm()" id="sub">
+		<br>
+	</form>
+
+</div>
+
+<script>
+   function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "profile.jpg";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+  </script>
+ <script>  
+
+</body>
+      
+
+</html>

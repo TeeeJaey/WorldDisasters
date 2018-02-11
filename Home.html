@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+</head>
+<style>
+.but1{	margin-left: 40px;
+	padding: 10px 32px;
+   	background: #f2c196;}
+
+.bats input[type=radio] {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+      }
+.bats {
+        width: 681px;
+        float: none;
+        list-style: none;
+        margin-top: 15px;
+        margin-left: 400px;
+      }
+.bats li{
+        float: left;
+      }
+  .bats label a{color:white;}
+ .bats label {
+          display: block;
+          padding: 10px 20px;
+          border-radius: 2px 2px 0 0;
+          color: white;
+          font-size: 16px;
+          font-weight: normal;
+          font-family: Arial;
+          background: black;
+          cursor: pointer;
+          top: 3px;
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+      }
+ .bats label:hover { background: #f5f5f0;  }
+.bats label a:hover { color:black;  }
+
+
+body a{
+	text-decoration: none;
+	color: black;
+}
+p{
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+        width: 83%;
+	float: left; 
+	background-color:  #d1e0e0; 
+	padding: 20px;
+	margin-top:-40px;
+	margin-left:75px;
+	font-size:16px;
+}
+
+.p1{
+        width: 45%;margin-top:-10px;}
+
+
+h2,h3, h4{	
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	width: 83%;
+	float: left; 
+	background-color: #d1e0e0; 
+	padding: 20px;
+	margin-left: 75px;
+	padding: 20px;
+	font-size: 20px;
+	font-family:Arial;
+}
+h2{font-size:30px;}
+.menu{
+	z-index:2;
+	background:black;
+	position: fixed;
+	top:0px;
+	left:-5px;
+	height:65px;
+	width:112%;
+}
+h1{ 
+	position: fixed;
+	left: 90px;
+	top: -5px;
+	font-size: 35px;
+	color: white;
+}
+img{
+	border: 3px solid black;
+	margin-top:130px;
+	margin-right:110px;
+	float: right;
+	height: 400px; 
+	width: 450px;
+	cursor: pointer;
+}
+body{
+	background:#f5f5f0;
+          height: 100%;
+          -webkit-font-smoothing: antialiased;
+          font-weight: 100;
+          font-family: helvetica;
+      }
+      
+.search{position:fixed;top:15px;left:1100px;;}
+i{color:#a6a6a6;position:fixed;top:20px;left:1270px;cursor:pointer;}
+i:hover{color:black;}
+
+.searchfield{padding:3px;background: #f5f5f0; font-size:16px; height:28px;border-radius:5px;}
+
+#dropbtn {
+	color:white;
+	position:fixed;
+	top:20px;
+	left:1313px;
+	cursor:pointer;
+	font-size:28px;
+    background-color: #000;
+	border:black;
+    cursor: pointer;
+}
+#dropbtn:hover{color: #f1f1f1}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+	top: 65px;
+	left:1185px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+
+</style>
+
+<script type='text/javascript'>
+var imageID=0;
+function changeimage(every_seconds){
+    //change the image
+    if(!imageID){
+        document.getElementById("myimage").src="http://efergy.com/blog/wp-content/uploads/2013/09/NaturalDisaster.jpg";
+        imageID++;
+    }
+    else{if(imageID==1){
+        document.getElementById("myimage").src="https://fellowshiproom.files.wordpress.com/2011/03/natural-disasters.jpg";
+        imageID++;
+    }else{if(imageID==2){
+        document.getElementById("myimage").src="https://whybecausescience.files.wordpress.com/2013/06/earthquake-aftermath.jpg";
+        imageID++;
+    }else{if(imageID==3){
+        document.getElementById("myimage").src="http://wallpapercave.com/wp/Gfvld6h.jpg";
+        imageID++;
+    }else{if(imageID==4){
+        document.getElementById("myimage").src="http://wallpapercave.com/wp/GG5zaTp.jpg";
+        imageID=0;
+    }}}}}
+    //call same function again for x of seconds
+    setTimeout("changeimage("+every_seconds+")",((every_seconds)*1500));
+}
+</script>
+
+<body onload='changeimage(2)'>
+<img width='300px' height='250px' id='myimage' src='http://wallpapercave.com/wp/GG5zaTp.jpg'/>
+<div class="menu">
+<ul class="bats">
+        <li>
+          <input type="radio" checked name="bats" id="bat1">
+          <label for="bat1" style="background: #f5f5f0;"><a style="color: #000;" href="Home.html">Home</a></label>
+	</li>
+        <li>
+          <input type="radio" checked name="bats" id="bat2">
+          <label for="bat1"><a href="NaturalDis.html">Natural Disaster</a></label>
+	</li>
+
+        <li>
+          <input type="radio" name="bats" id="bat3">
+          <label for="bat2"><a href="ArtificialDis.html">Artificial Disasters</a></label>
+        </li>
+
+        <li>
+          <input type="radio" name="bats" id="bat4">
+          <label for="bat3"><a href="Photos.html">Picture Gallery</a></label>
+        </li>
+	<li>
+          <input type="radio" name="bats" id="bat5">
+          <label for="bat4"><a href="AboutUs.html">About us</a></label>
+
+        </li>
+
+</ul><br><br><br>
+<div class="search"><input class="searchfield" type="text" placeholder="search"><i class="fa fa-search" style="font-size:24px"></i>
+<div class="dropdown">
+  <i onclick="dropdown()" id="dropbtn" class="fa fa-user"></i>
+  
+  <div id="myDropdown" class="dropdown-content">
+    <a href="Profile.html">View profile</a>
+    <a href="LogIn.html">Log in</a>
+    <a href="SignUp.html">Sign up</a>
+  </div>
+</div>
+</div>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function dropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('#dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+<a href="Welcome.html"><h1>World Disasters</h1></a>
+</div>
+<p class="p1" style="margin-top:150px;">A disaster is a serious disruption of the functioning of a community or a society involving widespread human, material, economic or environmental losses and impacts, which exceeds the ability of the affected community or society to cope using its own resources. In contemporary academia, disasters are seen as the consequence of inappropriately managed risk. These risks are the product of a combination of both hazards and vulnerability. Hazards that strike in areas with low vulnerability will never become disasters, as is the case in uninhabited regions.</p>
+
+
+<p class="p1">
+A natural disaster is a major adverse event resulting from natural processes of the Earth; examples include floods, volcanic eruptions, earthquakes, tsunamis, and other geologic processes. A natural disaster can cause loss of life or property damage,[1] and typically leaves some economic damage in its wake, the severity of which depends on the affected population's resilience, or ability to recover.[2]
+
+An adverse event will not rise to the level of a disaster if it occurs in an area without vulnerable population. In a vulnerable area, however, such as San Francisco in 1906, an earthquake can have disastrous consequences and leave lasting damage, requiring years to repair.</p>
+
+
+<h2>
+Classifications</h2>
+<p>
+Researchers have been studying disasters for more than a century, and for more than forty years disaster research. The studies reflect a common opinion when they argue that all disasters can be seen as being human-made, their reasoning being that human actions before the strike of the hazard can prevent it developing into a disaster. All disasters are hence the result of human failure to introduce appropriate disaster management measures.[7] Hazards are routinely divided into natural or human-made, although complex disasters, where there is no single root cause, are more common in developing countries. A specific disaster may spawn a secondary disaster that increases the impact. A classic example is an earthquake that causes a tsunami, resulting in coastal flooding.
+Natural hazard.
+A natural hazard is a natural process or phenomenon that may cause loss of life, injury or other health impacts, property damage, loss of livelihoods and services, social and economic disruption, or environmental damage.
+
+Various phenomena like earthquakes, landslides, volcanic eruptions, floods, hurricanes, tornadoes, blizzards, tsunamis, and cyclones are all natural hazards that kill thousands of people and destroy billions of dollars of habitat and property each year. However, the rapid growth of the world's population and its increased concentration often in hazardous environments has escalated both the frequency and severity of disasters. With the tropical climate and unstable land forms, coupled with deforestation, unplanned growth proliferation, non-engineered constructions which make the disaster-prone areas more vulnerable, tardy communication, and poor or no budgetary allocation for disaster prevention, developing countries suffer more or less chronically from natural disasters. Asia tops the list of casualties caused by natural hazards.
+Airplane crashes and terrorist attacks are examples of man-made disasters: they cause pollution, kill people, and damage property. This example is the September 11 attacks in 2001 at the World Trade Center in New York.
+Human-instigated disasters.
+
+Human-instigated disasters are the consequence of technological hazards. Examples include stampedes, fires, transport accidents, industrial accidents, oil spills and nuclear explosions/radiation. War and deliberate attacks may also be put in this category. As with natural hazards, man-made hazards are events that have not happened—for instance, terrorism. Man-made disasters are examples of specific cases where man-made hazards have become reality in an event.
+</p>
+
+
+</body>
+
+</html>

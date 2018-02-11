@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Picture Gallery</title>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<style>
+.but1{	margin-left: 40px;
+	padding: 10px 32px;
+   	}
+
+.but1{	margin-left: 40px;
+	padding: 10px 32px;
+   	}
+      
+
+.bats input[type=radio] {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+      }
+.bats {
+        width: 681px;
+        float: none;
+        list-style: none;
+        margin-top: 15px;
+        margin-left: 400px;
+      }
+.bats li{
+        float: left;
+      }
+  .bats label a{color:white;}
+ .bats label {
+          display: block;
+          padding: 10px 20px;
+          border-radius: 2px 2px 0 0;
+          color: white;
+          font-size: 16px;
+          font-weight: normal;
+          font-family: Arial;
+          background: black;
+          cursor: pointer;
+          top: 3px;
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+      }
+ .bats label:hover { background: #f5f5f0;  }
+.bats label a:hover { color:black;  }
+
+
+body a{
+	text-decoration: none;
+	color: black;
+}
+p{
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+        width: 83%;
+	float: left; 
+	background-color: #ffcc99; 
+	padding: 20px;
+	margin-top:-40px;
+	margin-left:75px;
+	font-size:16px;
+}
+
+.p1{
+        width: 45%;margin-top:-10px;}
+
+
+h2,h3, h4{	
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	width: 83%;
+	float: left; 
+	background-color: #ffcc99; 
+	padding: 20px;
+	margin-left: 75px;
+	padding: 20px;
+	font-size: 20px;
+	font-family:Arial;
+}
+h2{font-size:30px;}
+.menu{
+	z-index:2;
+	background:black;
+	position: fixed;
+	top:0px;
+	left:-5px;
+	height:65px;
+	width:112%;
+}
+h1{ 
+	position: fixed;
+	left: 90px;
+	top: -5px;
+	font-size: 35px;
+	color: white;
+}
+h5{font-size: 20px;
+}
+img{
+	border: 2px solid black;
+	height:120px;
+	margin:3px;
+	width:180px;
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+ 
+img:hover {
+  -webkit-filter: grayscale(100%);
+}
+body{  
+      background: #f5f5f0;
+        height: 100%;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 100;
+        font-family: helvetica;
+      }
+.pics{
+	background: #d1e0e0;
+	margin-top: 140px;
+	margin-left: 80px;
+	padding:30px;
+	width:59%;
+}
+
+.form{
+	padding:30px;
+	position:fixed;
+	right:40px;
+	top:200px;
+	background: #d1e0e0;}    
+.search{position:fixed;top:15px;left:1100px;;}
+i{color:#a6a6a6;position:fixed;top:20px;left:1270px;cursor:pointer;}
+i:hover{color:black;}
+.searchfield{padding:3px;background: #f5f5f0; font-size:16px; height:28px;border-radius:5px;}
+
+#dropbtn {
+	color:white;
+	position:fixed;
+	top:20px;
+	left:1313px;
+	cursor:pointer;
+	font-size:28px;
+    background-color: #000;
+	border:black;
+    cursor: pointer;
+}
+#dropbtn:hover{color: #f1f1f1}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+	top: 65px;
+	left:1185px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+</style>
+
+
+<body>
+
+<script>
+   function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+  </script>
+
+
+
+<div class="menu"  >
+<h1>Picture Gallery</h1>
+<ul class="bats">
+        <li>
+          <input type="radio" checked name="bats" id="bat1">
+          <label for="bat1"><a href="Home.html">Home</a></label>
+	</li>
+        <li>
+          <input type="radio" checked name="bats" id="bat1">
+          <label for="bat1"><a href="NaturalDis.html">Natural Disaster</a></label>
+	</li>
+
+        <li>
+          <input type="radio" name="bats" id="bat2">
+          <label for="bat2"><a href="ArtificialDis.html">Artificial Disasters</a></label>
+        </li>
+
+        <li>
+          <input type="radio" name="bats" id="bat3">
+          <label for="bat3" style="background: #f5f5f0;"><a style="color: #000;" href="Photos.html">Picture Gallery</a></label>
+        </li>
+	<li>
+          <input type="radio" name="bats" id="bat4">
+          <label for="bat4"><a href="AboutUs.html">About us</a></label>
+</li>
+</ul><br><br><br>
+<div class="search"><input class="searchfield" type="text" placeholder="search"><i class="fa fa-search" style="font-size:24px"></i>
+
+<div class="dropdown">
+  <i onclick="dropdown()" id="dropbtn" class="fa fa-user"></i>
+  
+  <div id="myDropdown" class="dropdown-content">
+    <a href="Profile.html">View profile</a>
+    <a href="LogIn.html">Log in</a>
+    <a href="SignUp.html">Sign up</a>
+  </div>
+</div>
+</div>
+</div>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function dropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('#dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+
+
+
+<div class="pics">
+<a href="http://efergy.com/blog/wp-content/uploads/2013/09/NaturalDisaster.jpg">
+	<img src="http://efergy.com/blog/wp-content/uploads/2013/09/NaturalDisaster.jpg"></img></a>
+<a href="http://whitchurchprimary.org.uk/wp-content/uploads/2013/04/natural_disasters_custom_poster_by_htn4ever-d5kqwfi1.jpg">
+	<img src="http://whitchurchprimary.org.uk/wp-content/uploads/2013/04/natural_disasters_custom_poster_by_htn4ever-d5kqwfi1.jpg"></img></a>
+<a href="http://4.bp.blogspot.com/_1LfpM1S_nq4/TPiFuH26bSI/AAAAAAAAAD0/fBN890IKMWM/s1600/Man-made.jpg">
+	<img src="http://4.bp.blogspot.com/_1LfpM1S_nq4/TPiFuH26bSI/AAAAAAAAAD0/fBN890IKMWM/s1600/Man-made.jpg"></img></a>
+<a href="http://www.911conspiracy.tv/images/2nd-hit/2nd-hit_Adair_Sean_worldatwar-org_WTCplane1.jpg">
+	<img src="http://www.911conspiracy.tv/images/2nd-hit/2nd-hit_Adair_Sean_worldatwar-org_WTCplane1.jpg"></img></a>
+<a href="http://currents.plos.org/disasters/files/2012/03/Volcano.jpg">
+	<img src="http://currents.plos.org/disasters/files/2012/03/Volcano.jpg"></img></a>
+<a href="https://upload.wikimedia.org/wikipedia/commons/7/72/Post-and-Grant-Avenue.-Look.jpg">
+	<img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Post-and-Grant-Avenue.-Look.jpg"></img></a>
+<a href="https://www.ncdc.noaa.gov/billions/images/katrina-08-28-2005.jpg">
+	<img src="https://www.ncdc.noaa.gov/billions/images/katrina-08-28-2005.jpg"></img></a>
+<a href="http://www.trumanlibrary.org/photos/bombnag.jpg">
+	<img src="http://www.trumanlibrary.org/photos/bombnag.jpg"></img></a>
+<a href="http://d.ibtimes.co.uk/en/full/1405734/tsunami.jpg">
+	<img src="http://d.ibtimes.co.uk/en/full/1405734/tsunami.jpg"></img></a>
+<a href="http://www.thehindu.com/multimedia/dynamic/01797/HY20RAYALPAGE1_1797863f.jpg">
+	<img src="http://www.thehindu.com/multimedia/dynamic/01797/HY20RAYALPAGE1_1797863f.jpg"></img></a>
+<a href="http://s.hswstatic.com/gif/cleaning-oil-spill-1.jpg">
+	<img src="http://s.hswstatic.com/gif/cleaning-oil-spill-1.jpg"></img></a>
+<a href="https://i.ytimg.com/vi/I34F1w4JKxg/hqdefault.jpg">
+	<img src="https://i.ytimg.com/vi/I34F1w4JKxg/hqdefault.jpg"></img></a>
+<a href="http://ptr247.com/wp-content/uploads/2013/05/home-fire.jpg">
+	<img src="http://ptr247.com/wp-content/uploads/2013/05/home-fire.jpg"></img></a>
+<a href="https://www.dosomething.org/sites/default/files/styles/550x300/public/images/Global%20Warming%202.jpg?itok=9j8Gc3Qb">
+	<img src="https://www.dosomething.org/sites/default/files/styles/550x300/public/images/Global%20Warming%202.jpg?itok=9j8Gc3Qb"></img></a>
+<a href="http://nimbuseco.com/wp-content/uploads/2013/01/Deforestation-Amazon.jpg">
+	<img src="http://nimbuseco.com/wp-content/uploads/2013/01/Deforestation-Amazon.jpg"></img></a>
+<a href="http://i1-news.softpedia-static.com/images/news2/A-Natural-Disaster-Prevention-Program-Launched-2.jpeg">
+	<img src="http://i1-news.softpedia-static.com/images/news2/A-Natural-Disaster-Prevention-Program-Launched-2.jpeg"></img></a>
+<a href="https://i.ytimg.com/vi/xOwinR7Ni20/maxresdefault.jpg">
+	<img src="https://i.ytimg.com/vi/xOwinR7Ni20/maxresdefault.jpg"></img></a>
+<a href="https://www.mysciencework.com/media/20151129/ce71199f44a74a6556bbfba4f9804604600945ab.jpeg">
+	<img src="https://www.mysciencework.com/media/20151129/ce71199f44a74a6556bbfba4f9804604600945ab.jpeg"></img></a>
+<a href="https://viewerscommentary.files.wordpress.com/2013/05/titanic-sinking.jpg">
+	<img src="https://viewerscommentary.files.wordpress.com/2013/05/titanic-sinking.jpg"></img></a>
+<a href="https://upload.wikimedia.org/wikipedia/commons/6/6b/2011_Horn_of_Africa_famine_Oxfam_01.jpg">
+	<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/2011_Horn_of_Africa_famine_Oxfam_01.jpg"></img></a>
+<a href="https://fellowshiproom.files.wordpress.com/2011/03/natural-disasters.jpg">
+	<img src="https://fellowshiproom.files.wordpress.com/2011/03/natural-disasters.jpg"></img></a>
+<a href="http://wallpapercave.com/wp/GG5zaTp.jpg">
+	<img src="http://wallpapercave.com/wp/GG5zaTp.jpg"></img></a>
+<a href="https://whybecausescience.files.wordpress.com/2013/06/earthquake-aftermath.jpg">
+	<img src="https://whybecausescience.files.wordpress.com/2013/06/earthquake-aftermath.jpg"></img></a>
+<a href="http://wallpapercave.com/wp/Gfvld6h.jpg">
+	<img src="http://wallpapercave.com/wp/Gfvld6h.jpg"></img></a>	
+<a href="https://www.microsoft.com/about/philanthropies/disaster-response/images/disaster-response-no-caption.jpg">
+	<img src="https://www.microsoft.com/about/philanthropies/disaster-response/images/disaster-response-no-caption.jpg"></img></a>
+<a href="http://strangesounds.org/wp-content/uploads/2015/04/natural-disaster-video.jpg">
+	<img src="http://strangesounds.org/wp-content/uploads/2015/04/natural-disaster-video.jpg"></img></a>
+<a href="http://www.itsnature.org/Photos/images/large/disaster5.jpg">
+	<img src="http://www.itsnature.org/Photos/images/large/disaster5.jpg"></img></a>
+<a href="http://previews.123rf.com/images/kentoh/kentoh0910/kentoh091000170/5677295-Natural-Disasters-Grunge-as-a-Art-Background-Stock-Photo-disaster.jpg">
+	<img src="http://previews.123rf.com/images/kentoh/kentoh0910/kentoh091000170/5677295-Natural-Disasters-Grunge-as-a-Art-Background-Stock-Photo-disaster.jpg"></img></a>
+<a href="http://assets.nydailynews.com/polopoly_fs/1.15871.1314097551!/img/httpImage/image.jpg_gen/derivatives/gallery_1200/gal-earthquack-japan-2-jpg.jpg">
+	<img src="http://assets.nydailynews.com/polopoly_fs/1.15871.1314097551!/img/httpImage/image.jpg_gen/derivatives/gallery_1200/gal-earthquack-japan-2-jpg.jpg"></img></a>
+<a href="http://www.unisdr.org/files/cache-image-resizer/aa04b5b7c0821535ac3074ea8eefc0b1-450x0.jpg">
+	<img src="http://www.unisdr.org/files/cache-image-resizer/aa04b5b7c0821535ac3074ea8eefc0b1-450x0.jpg"></img></a>
+<a href="http://i.unu.edu/media/ourworld.unu.edu-en/article/16510/Nepal-Earthquake-Preparing-and-Planning-for-the-Next-Disaster.jpg">
+	<img src="http://i.unu.edu/media/ourworld.unu.edu-en/article/16510/Nepal-Earthquake-Preparing-and-Planning-for-the-Next-Disaster.jpg"></img></a>
+<a href="http://www.telesurtv.net/__export/1448372136289/sites/telesur/img/news/2015/11/24/brazil-rio-doce4.jpg">
+	<img src="http://www.telesurtv.net/__export/1448372136289/sites/telesur/img/news/2015/11/24/brazil-rio-doce4.jpg"></img></a>
+							
+</div>
+
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == null || x == "") {
+        alert("First Name must be filled out");
+        return false;
+    }
+	var y = document.forms["myForm"]["lname"].value;
+    if (y == null || y == "") {
+        alert("Last Name must be filled out");
+        return false;
+    }
+var emailID = document.myForm.email.value;
+         atpos = emailID.indexOf("@");
+         dotpos = emailID.lastIndexOf(".");
+         
+         if (atpos < 1 || ( dotpos - atpos < 2 )) 
+         {
+            alert("Please enter correct email ID")
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+         return( true );
+</script>
+
+<div class="form">
+<h5>Upload image and contribute</h5>
+<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post" >
+First name:  <br><input type="text" name="fname" />
+<br>
+Last name:  <br><input type="text" name="lname" />
+<br>
+
+Email:  <br><input type="text" name="email" />
+<br><br>
+<input type="file" onchange="previewFile()"><br>
+</form>
+</div>
+</body>
+
+</html>

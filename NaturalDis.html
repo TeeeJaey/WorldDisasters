@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>NaturalDisasters</title>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<style>
+
+
+.bats input[type=radio] {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+      }
+.bats {
+        width: 681px;
+        float: none;
+        list-style: none;
+        margin-top: 15px;
+        margin-left: 400px;
+      }
+.bats li{
+        float: left;
+      }
+  .bats label a{color:white;}
+ .bats label {
+          display: block;
+          padding: 10px 20px;
+          border-radius: 2px 2px 0 0;
+          color: white;
+          font-size: 16px;
+          font-weight: normal;
+          font-family: Arial;
+          background: black;
+          cursor: pointer;
+          top: 3px;
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+      }
+ .bats label:hover { background: #f5f5f0;  }
+.bats label a:hover { color:black;  }
+
+
+body a{
+	text-decoration: none;
+	color: black;
+}
+p{
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+        width: 83%;
+	float: left; 
+	background-color:  #d1e0e0; 
+	padding: 20px;
+	margin-top:-40px;
+	margin-left:75px;
+	font-size:16px;
+}
+.p1{
+        font-size:18px;
+	padding: 30px;
+	width: 500px;
+	height: 300px;
+	margin-top:80px;}
+
+
+h2,h3, h4{	
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	width: 83%;
+	float: left; 
+	background-color: #d1e0e0; 
+	padding: 20px;
+	margin-left: 75px;
+	padding: 20px;
+	font-size: 20px;
+	font-family:Arial;
+}
+h2{font-size:30px;}
+.menu{
+	z-index:2;
+	background:black;
+	position: fixed;
+	top:0px;
+	left:-5px;
+	height:65px;
+	width:112%;
+}
+h1{ 
+	position: fixed;
+	left: 90px;
+	top: -5px;
+	font-size: 35px;
+	color: white;
+}
+img{
+	border: 3px solid black;
+	margin-top:70px;
+	margin-right:85px;
+	float: right;
+	width: 500px;
+	height: 360px;
+}
+body{
+	background:#f5f5f0;
+          height: 100%;
+          -webkit-font-smoothing: antialiased;
+          font-weight: 100;
+          font-family: helvetica;
+      }
+       
+.tabs input[type=radio] {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+      }
+.tabs {
+        width: 1200px;
+        float: none;
+        list-style: none;
+        padding: 0; 
+        margin-top: 50px;
+        margin-left: 75px;
+      }
+.tabs li{
+        float: left;
+      }
+ .tabs label {
+          display: block;
+          padding: 10px 20px;
+          border-radius: 2px 2px 0 0;
+          color: #000;
+          font-size: 24px;
+          font-weight: normal;
+          font-family: Arial;
+          background: #d1e0e0;
+          cursor: pointer;
+          top: 3px;
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+      }
+ .tabs label:hover {
+        background: #e6f5ff;
+
+      }
+       
+[id^=tab]:checked + label {
+        background: #e6f5ff;
+        color: black;
+      }
+       
+ [id^=tab]:checked ~ [id^=tab-content] {
+          display: block;
+      }
+.tab-content{
+	z-index:1;
+        display: none;
+        text-align: left;
+        width: 84%;
+        font-size: 20px;
+        line-height: 140%;
+        padding-top: 10px;
+        background: #d1e0e0;
+        padding: 10px;
+        color: black;
+        position: absolute;
+	left:83px;
+	margin-bottom:50px;
+        -webkit-animation-duration: 0.5s;
+        -o-animation-duration: 0.5s;
+        -moz-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+      }
+ul{margin-top:1000px;}
+
+.search{position:fixed;top:15px;left:1100px;;}
+i{color:#a6a6a6;position:fixed;top:20px;left:1270px;cursor:pointer;}
+i:hover{color:black;}
+#user{color:white;position:fixed;top:20px;left:1310px;cursor:pointer;font-size:28px;}
+#user:hover{}
+.searchfield{padding:3px;background: #f5f5f0; font-size:16px; height:28px;border-radius:5px;}
+
+#dropbtn {
+	color:white;
+	position:fixed;
+	top:20px;
+	left:1313px;
+	cursor:pointer;
+	font-size:28px;
+    background-color: #000;
+	border:black;
+    cursor: pointer;
+}
+#dropbtn:hover{color: #f1f1f1}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+	top: 65px;
+	left:1185px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1;}
+
+.show {display:block;}
+</style>
+
+
+<body>
+<div class="menu">
+<ul class="bats">
+        <li>
+          <input type="radio" checked name="bats" id="bat1">
+          <label for="bat1"><a href="Home.html">Home</a></label>
+	</li>
+        <li>
+          <input type="radio" checked name="bats" id="bat1">
+          <label for="bat1" style="background: #f5f5f0;"><a style="color: #000;" href="NaturalDis.html">Natural Disaster</a></label>
+	</li>
+
+        <li>
+          <input type="radio" name="bats" id="bat2">
+          <label for="bat2"><a href="ArtificialDis.html">Artificial Disasters</a></label>
+        </li>
+
+        <li>
+          <input type="radio" name="bats" id="bat3">
+          <label for="bat3"><a href="Photos.html">Picture Gallery</a></label>
+        </li>
+	<li>
+          <input type="radio" name="bats" id="bat4">
+          <label for="bat4"><a href="AboutUs.html">About us</a></label>
+
+        </li>
+
+</ul><br><br>
+<div class="search"><input class="searchfield" type="text" placeholder="search"><i class="fa fa-search" style="font-size:24px"></i>
+<div class="dropdown">
+  <i onclick="dropdown()" id="dropbtn" class="fa fa-user"></i>
+  
+  <div id="myDropdown" class="dropdown-content">
+    <a href="Profile.html">View profile</a>
+    <a href="LogIn.html">Log in</a>
+    <a href="SignUp.html">Sign up</a>
+  </div>
+</div>
+</div>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function dropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('#dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<h1>Natural Disaster</h1>
+</div>
+<p class="p1">A natural disaster is a major adverse event resulting from natural processes of the Earth; examples include floods, volcanic eruptions, earthquakes, tsunamis, and other geologic processes. A natural disaster can cause loss of life or property damage, and typically leaves some economic damage in its wake, the severity of which depends on the affected population's resilience, or ability to recover. An adverse event will not rise to the level of a disaster if it occurs in an area without vulnerable population. In a vulnerable area, however, such as San Francisco in 1906, an earthquake can have disastrous consequences and leave lasting damage, requiring years to repair.</p>
+<a href="http://whitchurchprimary.org.uk/wp-content/uploads/2013/04/natural_disasters_custom_poster_by_htn4ever-d5kqwfi1.jpg"><img src="http://whitchurchprimary.org.uk/wp-content/uploads/2013/04/natural_disasters_custom_poster_by_htn4ever-d5kqwfi1.jpg"></img></a>
+
+
+
+<h2>
+Classification of Natural Disasters</h2>
+<ul class="tabs">
+        <li>
+          <input type="radio" checked name="tabs" id="tab1">
+          <label for="tab1">Geological disasters</label>
+          <div id="tab-content1" class="tab-content animated fadeIn">
+    
+
+<h4>
+Avalanches and mudslides
+</h4>
+<p>
+During World War I, an estimated 40,000 to 80,000 soldiers died as a result of avalanches during the mountain campaign in the Alps at the Austrian-Italian front. Many of the avalanches were caused by artillery fire.
+</p>
+<h4>Earthquakes</h4>
+<p>
+
+An earthquake is the result of a sudden release of energy in the Earth's crust that creates seismic waves. At the Earth's surface, earthquakes manifest themselves by vibration, shaking and sometimes displacement of the ground. Earthquakes are caused mostly by slippage within geological faults, but also by other events such as volcanic activity, landslides, mine blasts, and nuclear tests. The underground point of origin of the earthquake is called the focus. The point directly above the focus on the surface is called the epicenter. Earthquakes by themselves rarely kill people or wildlife. It is usually the secondary events that they trigger, such as building collapse, fires, tsunamis (seismic sea waves) and volcanoes, that are actually the human disaster. Many of these could possibly be avoided by better construction, safety systems, early warning and planning.</p>
+<h4>Sinkholes </h4>
+<p>
+
+When natural erosion or human mining makes the ground too weak to support the structures built on it, the ground can collapse and produce a sinkhole. For example, the 2010 Guatemala City sinkhole which killed fifteen people was caused when heavy rain from Tropical Storm Agatha, diverted by leaking pipes into a pumice bedrock, led to the sudden collapse of the ground beneath a factory building.
+</p>
+<h4>Volcanic eruptions</h4>
+<p>Artist's impression of the volcanic eruptions that formed the Deccan Traps in India.
+
+Volcanoes can cause widespread destruction and consequent disaster in several ways. The effects include the volcanic eruption itself that may cause harm following the explosion of the volcano or the fall of rock. Second, lava may be produced during the eruption of a volcano. As it leaves the volcano, the lava destroys many buildings, plants and animals due to its extreme heat . Third, volcanic ash generally meaning the cooled ash - may form a cloud, and settle thickly in nearby locations. When mixed with water this forms a concrete-like material. In sufficient quantity ash may cause roofs to collapse under its weight but even small quantities will harm humans if inhaled. Since the ash has the consistency of ground glass it causes abrasion damage to moving parts such as engines. The main killer of humans in the immediate surroundings of a volcanic eruption is the pyroclastic flows, which consist of a cloud of hot volcanic ash which builds up in the air above the volcano and rushes down the slopes when the eruption no longer supports the lifting of the gases. It is believed that Pompeii was destroyed by a pyroclastic flow. A lahar is a volcanic mudflow or landslide. The 1953 Tangiwai disaster was caused by a lahar, as was the 1985 Armero tragedy in which the town of Armero was buried and an estimated 23,000 people were killed.
+
+A specific type of volcano is the supervolcano. According to the Toba catastrophe theory, 75,000 to 80,000 years ago a supervolcanic event at Lake Toba reduced the human population to 10,000 or even 1,000 breeding pairs, creating a bottleneck in human evolution. It also killed three-quarters of all plant life in the northern hemisphere. The main danger from a supervolcano is the immense cloud of ash, which has a disastrous global effect on climate and temperature for many years.
+
+</p>
+
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="tabs" id="tab2">
+          <label for="tab2">Hydrological disasters</label>
+          <div id="tab-content2" class="tab-content animated fadeIn">
+
+<h4>Hydrological disasters</h4>
+<p>The Limpopo River during the 2000 Mozambique flood
+
+It is a violent, sudden and destructive change either in quality of earth's water or in distribution or movement of water on land below the surface or in atmosphere.
+
+</p>
+
+<h4>
+Floods</h4>
+<p>
+A flood is an overflow of water that "submerges" land. The EU Floods Directive defines a flood as a temporary covering by water of land which is usually not covered by water. In the sense of "flowing water", the word may also be applied to the inflow of the tides. Flooding may result from the volume of water within a body of water, such as a river or lake, which overflows causing the result that some of the water escapes its usual boundaries.[10] While the size of a lake or other body of water will vary with seasonal changes in precipitation and snow melt, it is not a significant flood unless the water covers land used by man like a village, city or other inhabited area, roads, expanses of farmland, etc.
+</p><h4>Limnic eruptions</h4>
+
+<p>
+A limnic eruption occurs when a gas, usually CO2, suddenly erupts from deep lake water, posing the threat of suffocating wildlife, livestock and humans. Such an eruption may also cause tsunamis in the lake as the rising gas displaces water. Scientists believe landslides, volcanic activity, or explosions can trigger such an eruption. To date, only two limnic eruptions have been observed and recorded. In 1984, in Cameroon, a limnic eruption in Lake Monoun caused the deaths of 37 nearby residents, and at nearby Lake Nyos in 1986 a much larger eruption killed between 1,700 and 1,800 people by asphyxiation.
+
+</p>
+
+<h4>
+Tsunami</h4>
+<p>
+
+A tsunami (plural: tsunamis or tsunami; from Japanese: ??, lit. "harbour wave"; English pronunciation: /tsu?'n??mi/), also known as a seismic sea wave or as a tidal wave, is a series of waves in a water body caused by the displacement of a large volume of water, generally in an ocean or a large lake. Tsunamis can be caused by undersea earthquakes such as the 2004 Boxing Day tsunami, or by landslides such as the one in 1958 at Lituya Bay, Alaska, or by volcanic eruptions such as the ancient eruption of Santorini. On March 11, 2011, a tsunami occurred near Fukushima, Japan and spread through the Pacific.</p>
+
+<h4>Blizzards</h4><p>
+
+Blizzards are severe winter storms characterized by heavy snow and strong winds. When high winds stir up snow that has already fallen, it is known as a ground blizzard. Blizzards can impact local economic activities, especially in regions where snowfall is rare. The Great Blizzard of 1888 affected the United States, when many tons of wheat crops were destroyed, and in Asia, 2008 Afghanistan blizzard and the 1972 Iran blizzard were also significant events.
+
+</p>
+
+<h4>
+Cyclonic storms, 
+Tropical cyclones</h4>
+<p>
+Cyclone, tropical cyclone, hurricane, and typhoon are different names for the same phenomenon, which is a cyclonic storm system that forms over the oceans. The determining factor on which term is used is based on where they originate. In the Atlantic and Northeast Pacific, the term “hurricane” is used; in the Northwest Pacific it is referred to as a “typhoon” and “cyclones” occur in the South Pacific and Indian Ocean.
+
+The deadliest hurricane ever was the 1970 Bhola cyclone; the deadliest Atlantic hurricane was the Great Hurricane of 1780 which devastated Martinique, St. Eustatius and Barbados. Another notable hurricane is Hurricane Katrina, which devastated the Gulf Coast of the United States in 2005.
+
+</p>
+
+<h4>
+Extratropical cyclones</h4>
+<p>
+Extratropical cyclones, sometimes called mid-latitude cyclones, are a group of cyclones defined as synoptic scale low pressure weather systems that occur in the middle latitudes of the Earth (outside the tropics) not having tropical characteristics, and are connected with fronts and horizontal gradients in temperature and dew point otherwise known as "baroclinic zones". As with tropical cyclones, they are known by different names in different regions (nor'easter, Pacific Northwest windstorms, European windstorm, East Asian-northwest Pacific storms, sudestada, and Australian east coast cyclones). The most intense extratropical cyclones cause widespread disruption and damage to society, such as the storm surge of the North Sea flood of 1953 which killed 2251 people in the Netherlands and eastern England, the Great Storm of 1987 which damaged southern England and France, and the Columbus Day Storm of 1962 which struck the Pacific Northwest.
+Affected areas in the western Sahel belt during the 2012 drought.
+
+</p>
+
+
+<h4>
+Hailstorms</h4>
+<p>
+Hailstorms are falls of rain drops that arrive as ice, rather than melting before they hit the ground. A particularly damaging hailstorm hit Munich, Germany, on July 12, 1984, causing about 2 billion dollars in insurance claims.
+</p>
+          </div>
+        </li>
+
+        <li>
+          <input type="radio" name="tabs" id="tab3">
+          <label for="tab3">Space disasters</label>
+          <div id="tab-content4" class="tab-content animated fadeIn">
+           <h4>Impact events and airburst</h4>
+<p>
+Asteroids that impact the Earth have led to several major extinction events, including one that created the Chicxulub crater 64.9 million years ago and associated with the demise of the dinosaurs. Scientists estimate that the likelihood of death for a living human from a global impact event is comparable to death from airliner crash.
+
+No human death has been definitively attributed to an impact event, but the 1490 Ch'ing-yang event in which over 10,000 people may have died has been linked to a meteor shower. Even asteroids and comets that burn up in the atmosphere can cause significant destruction on the ground due to the air burst explosion – notable air bursts include the Tunguska event in June 1908, which devastated large areas of Siberian countryside, and the Chelyabinsk meteor on 15 February 2013, which caused widespread property damage in the city of Chelyabinsk and injured 1,491.
+</p>
+<h4>Solar flare</h4>
+<p>
+A solar flare is a phenomenon where the sun suddenly releases a great amount of solar radiation, much more than normal. Solar flares are unlikely to cause any direct injury, but can destroy electrical equipment. The potential of solar storms to cause disaster was seen during the 1859 Carrington event, which disrupted the telegraph network, and the March 1989 geomagnetic storm which blacked out Quebec. Some major known solar flares include the X20 event on August 16, 1989, and a similar flare on April 2, 2001. The most powerful flare ever recorded occurred on November 4, 2003 (estimated at between X40 and X45).
+</p>
+
+          </div>
+        </li>
+<li>
+          <input type="radio" name="tabs" id="tab4">
+          <label for="tab4">Other disasters</label>
+          <div id="tab-content5" class="tab-content animated fadeIn">
+   <h4>Droughts</h4>
+<p>
+Drought is the unusual dryness of soil, resulting in crop failure and shortage of water and for other uses which is caused by significant low rainfall than average over a prolonged period. Hot dry winds, shortage of water, high temperatures and consequent evaporation of moisture from the ground can contribute to conditions of drought.
+
+Well-known historical droughts include the 1997–2009 Millennium Drought in Australia led to a water supply crisis across much of the country. As a result, many desalination plants were built for the first time (see list). In 2011, the State of Texas lived under a drought emergency declaration for the entire calendar year and severe economic losses.[11] The drought caused the Bastrop fires.
+A large hailstone, about 6 cm (2.4 in) in diameter
+
+</p>
+<h4>Heat waves</h4><p>
+A heat wave is a period of unusually and excessively hot weather. The worst heat wave in recent history was the European Heat Wave of 2003. A summer heat wave in Victoria, Australia, created conditions which fuelled the massive bushfires in 2009. Melbourne experienced three days in a row of temperatures exceeding 40 °C (104 °F) with some regional areas sweltering through much higher temperatures. The bushfires, collectively known as "Black Saturday", were partly the act of arsonists. The 2010 Northern Hemisphere summer resulted in severe heat waves, which killed over 2,000 people. It resulted in hundreds of wildfires which causing widespread air pollution, and burned thousands of square miles of forest.
+A classic anvil-shaped, and clearly-developed Cumulonimbus incus
+
+</p>
+<h4>Tornadoes</h4><p>
+A tornado is a violent, dangerous, rotating column of air that is in contact with both the surface of the earth and a cumulonimbus cloud or, in rare cases, the base of a cumulus cloud. It is also referred to as a twister or a cyclone,[12] although the word cyclone is used in meteorology in a wider sense, to refer to any closed low pressure circulation. Tornadoes come in many shapes and sizes, but are typically in the form of a visible condensation funnel, whose narrow end touches the earth and is often encircled by a cloud of debris and dust. Most tornadoes have wind speeds less than 110 miles per hour (177 km/h), are approximately 250 feet (80 m) across, and travel a few miles (several kilometers) before dissipating. The most extreme tornadoes can attain wind speeds of more than 300 mph (480 km/h), stretch more than two miles (3 km) across, and stay on the ground for dozens of miles (perhaps more than 100 km).[13][14][15]
+
+</p>
+<h4>Wildfires</h4> <p>
+
+Wildfires are large fires which often start in wildland areas. Common causes include lightning and drought but wildfires may also be started by human negligence or arson. They can spread to populated areas and can thus be a threat to humans and property, as well as wildlife. Notable cases of wildfires were the 1871 Peshtigo Fire in the United States, which killed at least 1700 people, and the 2009 Victorian bushfires in Australia.
+Health disasters
+
+</p>
+
+<h4>
+Epidemics</h4> <p>
+An epidemic is an outbreak of a contractible disease that spreads through a human population. A pandemic is an epidemic whose spread is global. There have been many epidemics throughout history, such as the Black Death. In the last hundred years, significant pandemics include the 1918 Spanish flu pandemic (killing an estimated 50 million people worldwide), the 1957–58 Asian flu pandemic, and the AIDS pandemic, which began in 1959. The 1968–69 Hong Kong water flu pandemic, the 2002-3 SARS pandemic, and the H1N1 Influenza (Swine Flu) Pandemic in 2009–2010 were also significant cases.
+</p>
+
+          </div>
+        </li>
+
+</ul>
+
+</body>

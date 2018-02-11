@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About us</title>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+</head>
+<style>
+
+.bats input[type=radio] {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+      }
+.bats {
+        width: 681px;
+        float: none;
+        list-style: none;
+        margin-top: 15px;
+        margin-left: 400px;
+      }
+.bats li{
+        float: left;
+      }
+  .bats label a{color:white;}
+ .bats label {
+          display: block;
+          padding: 10px 20px;
+          border-radius: 2px 2px 0 0;
+          color: white;
+          font-size: 16px;
+          font-weight: normal;
+          font-family: Arial;
+          background: black;
+          cursor: pointer;
+          top: 3px;
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+      }
+ .bats label:hover { background: #f5f5f0;  }
+.bats label a:hover { color:black;  }
+
+
+body a{
+	text-decoration: none;
+	color: black;
+}
+p, table, .info{
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+        width: 744px;
+	float: left; 
+	background-color:  #d1e0e0; 
+	padding: 20px;
+	margin-top:-40px;
+	margin-left:75px;
+	font-size:16px;
+}
+
+table{width: 786px;padding-right:65px;}
+.info li{margin-left:20px;}
+.p1{width: 744px; margin-top:-10px;}
+
+h2,h3, h4{	
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	width: 744px;
+	float: left; 
+	background-color:  #d1e0e0; 
+	padding: 20px;
+	margin-top:150px;
+	margin-left: 75px;
+	padding: 20px;
+	font-size: 20px;
+	font-family:Arial;
+}
+h2{font-size:30px;}
+.menu{
+	z-index:2;
+	background:black;
+	position: fixed;
+	top:0px;
+	left:-5px;
+	height:65px;
+	width:112%;
+}
+h1{ 
+	position: fixed;
+	left: 90px;
+	top: -2px;
+	font-size: 35px;
+	color: white;
+}
+h5{font-size: 20px;
+}
+img{
+	border: 2px solid black;
+	border-radius:5px;
+	height:180px;
+	width:180px;
+	position:absolute;
+	top:330px;
+	left:810px;
+}
+body{  
+      background: #f5f5f0;
+        height: 100%;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 100;
+        font-family: helvetica;
+      }
+.pics{
+	background: #d1e0e0;
+	margin-top: 180px;
+	margin-left: 80px;
+	padding:30px;
+	width:60%;
+}  
+.form{
+	padding:30px;
+	position:fixed;
+	left:1030px;
+	top:120px;
+	width: 200px;
+	background: #d1e0e0;}    
+td{background:white;font-weight:bold;padding:5px;font-family: helvetica;border:2px solid black;}
+
+.fb:hover{background: #ebebe0;}
+.fb:active{background: #4d88ff;}
+.search{position:fixed;top:15px;left:1100px;;}
+i{color:#a6a6a6;position:fixed;top:20px;left:1270px;cursor:pointer;}
+i:hover{color:black;}
+#user{color:white;position:fixed;top:20px;left:1310px;cursor:pointer;font-size:28px;}
+#user:hover{}
+.searchfield{padding:3px;background: #f5f5f0; font-size:16px; height:28px;border-radius:5px;}
+
+#dropbtn {
+	color:white;
+	position:fixed;
+	top:20px;
+	left:1313px;
+	cursor:pointer;
+	font-size:28px;
+    background-color: #000;
+	border:black;
+}
+#dropbtn:hover{color: #f1f1f1}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+	top: 65px;
+	left:1185px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1;}
+
+.show {display:block;}
+</style>
+
+
+<body>
+<script>
+function validateForm() {
+		var x = document.forms["myForm"]["fname"].value;
+    if (x == null || x == "" || x == '\u2718') {
+        document.getElementsByName("fname")[0].value = '\u2718';  
+        document.getElementsByName("fname")[0].style.color = 'red';		
+	}
+	else
+        document.getElementsByName("fname")[0].style.color = 'green';
+		
+	x = document.forms["myForm"]["lname"].value;
+    if (x == null || x == "" || x == '\u2718') {
+        document.getElementsByName("lname")[0].value = '\u2718';  
+        document.getElementsByName("lname")[0].style.color = 'red';		
+	}
+	else
+        document.getElementsByName("lname")[0].style.color = 'green';
+	
+	x = document.forms["myForm"]["message"].value;
+    if (x == null || x == "" || x == '\u2718') {
+        document.getElementsByName("message")[0].value = '\u2718';  
+        document.getElementsByName("message")[0].style.color = 'red';		
+	}
+	else
+        document.getElementsByName("message")[0].style.color = 'green';
+	
+	x = document.myForm.email.value;
+    if (x == null || x == "" || x == '\u2718') {
+        document.getElementsByName("email")[0].value = '\u2718';  
+        document.getElementsByName("email")[0].style.color = 'red';	
+	}
+	else{
+		atpos = x.indexOf("@");
+         dotpos = x.lastIndexOf(".");
+         
+         if (atpos < 1 || ( dotpos - atpos < 2 )) 
+			document.getElementsByName("email")[0].style.color = 'red';
+         else
+			document.getElementsByName("email")[0].style.color = 'green';
+    }
+	
+	
+    x = document.forms["myForm"]["fname"].value;
+    if (x == null || x == "" || x == '\u2718') {
+        alert("First Name must be filled out");
+        return false;
+    }
+	x = document.forms["myForm"]["lname"].value;
+    if (x == null || x == "" || x == '\u2718') {
+        alert("Last Name must be filled out");
+        return false;
+    }
+	x = document.forms["myForm"]["message"].value;
+    if (x == null || x == "" || x == '\u2718') {
+        alert("Message must be filled out");
+        return false;}
+
+	x = document.forms["myForm"]["email"].value;
+    if (x == null || x == "" || x == '\u2718') {
+        document.getElementsByName("email")[0].value = '\u2718';  
+        document.getElementsByName("email")[0].style.color = 'red';		
+		return false;
+	}
+	else{
+		atpos = x.indexOf("@");
+         dotpos = x.lastIndexOf(".");
+         
+         if (atpos < 1 || ( dotpos - atpos < 2 )) 
+         {
+            alert("Please enter correct email ID");
+            document.myForm.EMail.focus() ;
+			document.getElementsByName("email")[0].style.color = 'red';
+            return false;
+         }
+         else
+			document.getElementsByName("email")[0].style.color = 'green';
+			return true;
+    }
+		
+}
+function fn1(){
+	var x = document.forms["myForm"]["fname"].value;
+    if (x == null || x == "" || x == '\u2718') {
+        document.getElementsByName("fname")[0].value = '\u2718';  
+        document.getElementsByName("fname")[0].style.color = 'red';		
+	}
+	else
+        document.getElementsByName("fname")[0].style.color = 'green';
+	return;	
+}
+function fn2(){
+	var x = document.forms["myForm"]["fname"].value;
+    if (x == null || x == "" || x == '\u2718') {
+        document.getElementsByName("fname")[0].value = '\u2718';  
+        document.getElementsByName("fname")[0].style.color = 'red';		
+	}
+	else
+        document.getElementsByName("fname")[0].style.color = 'green';
+		
+	var x = document.forms["myForm"]["lname"].value;
+    if (x == null || x == "" || x == '\u2718') {
+        document.getElementsByName("lname")[0].value = '\u2718';  
+        document.getElementsByName("lname")[0].style.color = 'red';		
+	}
+	else
+        document.getElementsByName("lname")[0].style.color = 'green';
+	return;	
+}
+
+function fn3(){
+	var x = document.forms["myForm"]["fname"].value;
+    if (x == null || x == "" || x == '\u2718') {
+        document.getElementsByName("fname")[0].value = '\u2718';  
+        document.getElementsByName("fname")[0].style.color = 'red';		
+	}
+	else
+        document.getElementsByName("fname")[0].style.color = 'green';
+		
+	var x = document.forms["myForm"]["lname"].value;
+    if (x == null || x == "" || x == '\u2718') {
+        document.getElementsByName("lname")[0].value = '\u2718';  
+        document.getElementsByName("lname")[0].style.color = 'red';		
+	}
+	else
+        document.getElementsByName("lname")[0].style.color = 'green';
+	
+	var x = document.forms["myForm"]["message"].value;
+    if (x == null || x == "" || x == '\u2718') {
+        document.getElementsByName("message")[0].value = '\u2718';  
+        document.getElementsByName("message")[0].style.color = 'red';		
+	}
+	else
+        document.getElementsByName("message")[0].style.color = 'green';
+	return;	
+}
+</script>
+
+<div class="menu"  id="crosslayer" style="position:absolute">
+<h1>About us</h1>
+<ul class="bats">
+        <li>
+          <input type="radio" checked name="bats" id="bat1">
+          <label for="bat1"><a href="Home.html">Home</a></label>
+	</li>
+        <li>
+          <input type="radio" checked name="bats" id="bat1">
+          <label for="bat1"><a href="NaturalDis.html">Natural Disaster</a></label>
+	</li>
+
+        <li>
+          <input type="radio" name="bats" id="bat2">
+          <label for="bat2"><a href="ArtificialDis.html">Artificial Disasters</a></label>
+        </li>
+
+        <li>
+          <input type="radio" name="bats" id="bat3">
+          <label for="bat3"><a href="Photos.html">Picture Gallery</a></label>
+        </li>
+	<li>
+          <input type="radio" name="bats" id="bat4">
+          <label for="bat4" style="background: #f5f5f0;"><a style="color: black;" href="AboutUs.html">About us</a></label>
+
+        </li>
+
+</ul><br><br><br>
+<div class="search"><input class="searchfield" type="text" placeholder="search"><i class="fa fa-search" style="font-size:24px"></i>
+<div class="dropdown">
+  <i onclick="dropdown()" id="dropbtn" class="fa fa-user"></i>
+  
+  <div id="myDropdown" class="dropdown-content">
+    <a href="Profile.html">View profile</a>
+    <a href="LogIn.html">Log in</a>
+    <a href="SignUp.html">Sign up</a>
+  </div>
+</div>
+</div>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function dropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('#dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</div>
+</div>
+<h3>About website</h3>
+<ul class="info">
+<li>Disasters of the World is an informative website that educates user of almost all the past disaster occurrences. </li>
+<li>This includes artificial (man-made) disasters and natural disasters (earthquakes etc.)</li>
+<li> It also has all the numbers related to every disaster(No.of deaths, injuries, property damage etc.) </li>
+</ul>
+<h3 style="margin-top: 10px">Developers</h3>
+<img src="img.jpg"></img>
+
+<table>
+<tr><td >Tejas Jadhav --</td><td>tejasjadhav.nmims@gmail.com</td> <td class="fb"><a  href="https://www.facebook.com/tjadhav95?fref=ts">Contact on Facebook</a> </td></tr>
+<tr>
+<td >Mihir Gandhi --</td> <td>gandhimihirj@gmail.com </td> <td class="fb"><a href="https://www.facebook.com/mihir.gandhi.5264?fref=ts">Contact on Facebook</a> </td></tr>
+</table>
+<div class="form">
+<h5>Give us a feedback
+
+</h5>
+
+
+ <form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+		First Name: <input type="text" name="fname"><br>
+		Last Name: <input type="text" name="lname" onclick="fn1()">
+
+		Message: <textarea name="message" rows="3" cols="22" onclick="fn2()" id="t"></textarea>
+		Gender: <br>
+		<input type="radio" name="Gender" onclick="fn3()"> Male <br>
+		<input type="radio" name="Gender" onclick="fn3()"> Female<br><br>
+		E-mail ID: <input type="text" name="email" onclick="fn3()"><br><br>
+		<input type='button' onclick='encrypt("t", 3)' value='Encrypt message' id="enc">
+		<input type="submit" value="Submit" id="sub">
+</form>
+     </div>
+ <script>  
+ function encrypt(id, shift)
+{
+   var t = document.getElementById(id), out = '';
+   var txt = t.value, ranges = [[65,90],[97,122]];
+    
+   for(var i = 0; i < txt.length; i++)
+   {
+       var code = txt.charCodeAt(i);   
+       for(var j = 0; j < ranges.length; j++)
+       {
+           if (code >= ranges[j][0] && code <= ranges[j][1])
+           {
+                code = ((code - ranges[j][0] + shift) %
+                   (ranges[j][1] - ranges[j][0] + 1)) + ranges[j][0];
+                break;
+           }
+       }
+       out += String.fromCharCode(code);
+   }
+   t.value = out;
+	if(shift === 3) {
+		document.getElementById("enc").value = "Decrypt message";
+		document.getElementById("enc").onclick = function() {encrypt("t", -3)};
+	}
+	else{
+		document.getElementById("enc").value = "Encrypt message";
+		document.getElementById("enc").onclick = function() {encrypt("t", 3)};
+	}
+}
+</script>
+</body>
+      
+
+</html>
